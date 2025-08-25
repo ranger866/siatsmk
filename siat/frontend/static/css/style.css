@@ -1,0 +1,190 @@
+:root {
+    --main-color: rgb(0,0,180);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    padding: 10px 10px 15px 10px;
+    display: flex;
+    background-color: none;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header > .logo {
+    width: 40%;
+    padding: 5px;
+}
+
+header > .navbar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header > .navbar > a {
+    color: var(--main-color);
+}
+
+header > .sidebar {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 5em;
+    right: 1em;
+    opacity: 0;
+    pointer-events: none;
+}
+
+header > .sidebar.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+header > .sidebar > a {
+    font-size: 1.2em;
+    color: var(--main-color);
+}
+
+header > .burger {
+    font-size: 2em;
+    background: none;
+    border: none;
+    color:var(--main-color);
+    cursor: pointer;
+}
+
+.main {
+    padding: 15px;
+}
+
+.main > .home {
+    margin: 0 0 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > .home > h1 {
+    margin: 0;
+}
+
+.main > .home > .home_button {
+    width: 100%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.main > .home > .home_button > a {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.main > .home > .home_button > a:first-child {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.main > .home > .home_button > a:last-child {
+    border: solid 1.5px var(--main-color);
+}
+
+.main > .masuk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > .masuk > .card_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.main > .masuk > .card_cont > h3 {
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.main > .masuk > .card_cont > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 2em;
+}
+
+.main > .masuk > .card_cont > .card > img {
+    width: 50%;
+}
+
+.main > .masuk > .card_cont > .card > p {
+    text-align: center;
+}
+
+.main > .masuk > .card_cont > .card > p.role {
+    font-weight: bolder;
+    margin: 10px 0 5px;
+}
+
+.main > .masuk > .card_cont > .card > a {
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+  /* --- RESPONSIVE --- */
+@media (min-width: 768px) {
+    header {
+        padding: 1em 2em;
+    }
+
+    header > .logo {
+        width: 25%;
+    }
+  
+    header > .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+  
+    header > .burger {
+        display: none;
+    }
+}
+  
