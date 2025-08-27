@@ -4,7 +4,7 @@ require_once  "../auth/helpers.php";
 
 if (!isset($role)) $role = "";
 if (!isset($title)) $title = "Login $role";
-$action = "../auth/login.php";
+$action = "/auth/login.php";
 $label = getLabelLogin($role);
 
 ?>
@@ -14,16 +14,16 @@ $label = getLabelLogin($role);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/img/logo_siakad.png" type="image/x-icon">
-    <link rel="stylesheet" href="../../static/css/login_form_style.css">
-    <script src="../../static/js/login_form.js"></script>
+    <link rel="shortcut icon" href="/img/logo_siakad.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/login_form_style.css">
+    <script src="/js/login_form.js"></script>
     <title><?= htmlspecialchars($title)  ?></title>
 </head>
 <body>
     <div class="form_wrap">
         <div class="form_cont">
             <div class="form_head">
-                <img src="../../assets/img/logo_siakad_vertical.png" alt="logo_siakad">
+                <img src="/img/logo_siakad_vertical.png" alt="logo_siakad">
                 <h2>Masuk Sebagai <?= htmlspecialchars($role) ?></h2>
                 <p>Selamat Datang di Sistem Informasi Akademik</p>
             </div>

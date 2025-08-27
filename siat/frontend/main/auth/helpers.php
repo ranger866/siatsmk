@@ -17,4 +17,29 @@ function generate_csrfToken() {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     return $_SESSION['csrf_token'];
 }
+
+function database_path() {
+    return "C:/Dani(titip)/siat/backend/database";
+}
+
+function create_path() {
+    return "C:/Dani(titip)/siat/backend/crud/create";
+}
+
+function read_path() {
+    return "C:/Dani(titip)/siat/backend/crud/read";
+}
+
+function update_path() {
+    return "C:/Dani(titip)/siat/backend/crud/update";
+}
+
+function delete_path() {
+    return "C:/Dani(titip)/siat/backend/crud/delete";
+}
+
+function upload_path() {
+    return "C:/Dani(titip)/siat/backend/user_uploads";
+}
+
 ?>

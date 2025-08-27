@@ -5,7 +5,7 @@ require_once "../auth/helpers.php";
 
 // cek apakah sudah login
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    header("Location: ../operator/operator_login.php"); // fallback ke login
+    header("Location: index.php"); // fallback ke login
     exit;
 }
 
@@ -21,25 +21,25 @@ $title = "Dashboard {$role}"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/img/logo_siakad.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../static/css/dashboard_style.css">
-  <script src="../../static/js/script.js" defer></script>
+  <link rel="shortcut icon" href="/img/logo_siakad.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/dashboard_style.css">
+  <script src="/js/script.js" defer></script>
   <title><?= htmlspecialchars($title) ?></title>
 </head>
 <body>
 
 
   <header>
-    <img class="logo" src="../../assets/img/siakad-ung.png" alt="logo_siakad">
+    <img class="logo" src="/img/siakad-ung.png" alt="logo_siakad">
     <nav class="navbar">
       <h3><?= htmlspecialchars($username)?></h3>
-      <img class="profile_img" src="../../backend/user_upload/user_folder/<?=$role?>/<?=$id?>/profile_img.jpg" alt="profile_img">
+      <img class="profile_img" src="/upload/user_folder/<?=$role?>/<?=$id?>/profile_img.jpg" alt="profile_img">
     </nav>
 
 
 
     <nav id="sidebar" class="sidebar">
-      <a href="dashboard.php">
+      <a href="#">
         <p>Home</p> 
         <div class="svg_cont">
           <svg class="svg_icon" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ $title = "Dashboard {$role}"
           </svg>
         </div>
       </a>
-      <a href="profile.php">
+      <a href="#">
         <p>Profile</p>
         <div class="svg_cont">
           <svg class="svg_icon" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@ $title = "Dashboard {$role}"
           </svg>
         </div>
       </a>
-      <a href="jadwal.php">
+      <a href="#">
         <p>Jadwal </p>
         <div class="svg_cont">
           <svg class="svg_icon" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,7 +69,7 @@ $title = "Dashboard {$role}"
         </div>
       </a>
       <?php if ($role === "siswa" | $role === "guru"):?>
-        <a href="nilai.php">
+        <a href="#">
           <p>Nilai</p>
           <div class="svg_cont">
             <svg class="svg_icon" width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,27 +78,27 @@ $title = "Dashboard {$role}"
             </svg>
           </div>
         </a>
-        <a href="kelas.php">
+        <a href="#">
           <p>Kelas</p>
           <div class="svg_cont">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-school-icon lucide-school svg_icon"><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M18 5v16"/><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/><path d="M6 5v16"/><circle cx="12" cy="9" r="2"/></svg>
           </div>
         </a>
       <?php elseif ($role === "operator"): ?>
-        <a href="kelola_user.php">
+        <a href="#">
           <p>Users</p>
           <div class="svg_cont">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users svg_icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
           </div>
         </a>
         <?php endif;?>
-      <a href="pengumuman.php">
+      <a href="#">
         <p>Info</p>
         <div class="svg_cont">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone-icon lucide-megaphone svg_icon"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/></svg>
         </div>
       </a>
-      <a href="../auth/logout.php">
+      <a href="/auth/logout.php">
         <p>Logout</p>
         <div class="svg_cont">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out-icon lucide-log-out svg-icon"><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>

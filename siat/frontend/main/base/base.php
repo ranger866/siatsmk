@@ -8,14 +8,14 @@ function base_header($title = "Sistem Akademik Sekolah") {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../../assets/img/logo_siakad.png" type="image/x-icon">
-  <link rel="stylesheet" href="../../static/css/style.css">
-  <script src="../../static/js/script.js" defer></script>
+  <link rel="shortcut icon" href="/img/logo_siakad.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/script.js" defer></script>
   <title><?= htmlspecialchars($title) ?></title>
 </head>
 <body>
   <header>
-    <img class="logo" src="../../assets/img/siakad-ung.png" alt="logo_siakad">
+    <img class="logo" src="/img/siakad-ung.png" alt="logo_siakad">
     <nav id="navbar" class="navbar">
       <a href="#home">Beranda</a>
       <a href="#masuk">Masuk</a>
@@ -34,7 +34,7 @@ function base_header($title = "Sistem Akademik Sekolah") {
 function base_footer() {
 ?>
 <footer>
-  <p>&#169 2025 14A11. All Rights Reserved</p>
+  <p>Copyright&#169 2025 14A11. All Rights Reserved</p>
 </footer>
 
 

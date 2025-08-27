@@ -1,0 +1,51 @@
+<VirtualHost *:80> 
+
+    ServerName siat.local
+    DocumentRoot "C:/Dani(titip)/siat/frontend/main/view"
+    <Directory "C:/Dani(titip)/siat/frontend/main/view">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /base "C:/Dani(titip)/siat/frontend/main/base"
+    <Directory "C:/Dani(titip)/siat/frontend/main/base">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /siswa "C:/Dani(titip)/siat/frontend/main/siswa"
+    <Directory "C:/Dani(titip)/siat/frontend/main/siswa">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /guru "C:/Dani(titip)/siat/frontend/main/guru"
+    <Directory "C:/Dani(titip)/siat/frontend/main/guru">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /operator "C:/Dani(titip)/siat/frontend/main/operator"
+    <Directory "C:/Dani(titip)/siat/frontend/main/operator">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /img "C:/Dani(titip)/siat/frontend/assets/img"
+    <Directory "C:/Dani(titip)/siat/frontend/assets/img">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /css "C:/Dani(titip)/siat/frontend/static/css"
+    <Directory "C:/Dani(titip)/siat/frontend/static/css">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    Alias /js "C:/Dani(titip)/siat/frontend/static/js"
+    <Directory "C:/Dani(titip)/siat/frontend/static/js">
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>

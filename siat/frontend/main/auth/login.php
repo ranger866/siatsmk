@@ -1,8 +1,11 @@
 <?php
 session_start();
-require_once "helpers.php";
-require_once "../../../backend/database/database.php"; // koneksi PDO
-include "../../../backend/user_uploads/folder_validator.php";
+require_once "../auth/helpers.php";
+$database = database_path();
+$upload = upload_path();
+
+require_once "$database/database.php"; // koneksi PDO
+include "$upload/folder_validator.php";
 
 // CSRF check 
 if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
@@ -15,7 +18,7 @@ $password = trim($_POST['password']);
 
 // Validasi awal
 if ($role === "" || $username === "" || $password === "") {
-    header("Location: ../{$role}/{$role}_login.php?error=empty");
+    header("Location: /{$role}/{$role}_login.php?error=empty");
     exit;
 }
 
@@ -47,7 +50,7 @@ if ($user && $password === $user['password']) {
     $_SESSION['role']      = $role;
     $_SESSION['username']  = $user['username'];
     
-    header("Location: ../{$role}/dashboard.php");
+    header("Location: /{$role}/dashboard.php");
 
 } else {
     header("Location: {$role}_login.php?error=invalid");

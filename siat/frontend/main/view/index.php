@@ -21,22 +21,22 @@ base_header("SIAKAD");
             </div>
             <div class="content_card">
                 <div class="card">
-                    <img src="../../assets/img/siswa.png" alt="icon_siswa" class="icon_siswa">
+                    <img src="/img/siswa.png" alt="icon_siswa" class="icon_siswa">
                     <p class="role">Siswa</p>
                     <p>Akses ke informasi akademikmu, seperti jadwal mata pelajaran, nilai, pengumuman lomba dan beasiswa dan lainnya</p>
-                    <a href="../siswa/siswa_login.php">Masuk</a>
+                    <a href="/siswa/siswa_login.php">Masuk</a>
                 </div>
                 <div class="card">
-                    <img src="../../assets/img/guru.png" alt="icon_guru">
+                    <img src="/img/guru.png" alt="icon_guru">
                     <p class="role">Guru</p>
                     <p>Kelola aktivitas akademik, seperti absensi, jadwal mengajar, input nilai dan lainnya</p>
-                    <a href="../guru/guru_login.php">Masuk</a>
+                    <a href="/guru/guru_login.php">Masuk</a>
                 </div>
                 <div class="card">
-                    <img src="../../assets/img/operator.png" alt="icon_operator">
+                    <img src="/img/operator.png" alt="icon_operator">
                     <p class="role">Operator</p>
                     <p>Kelola data akademik, termasuk data siswa, guru, mata pelajaran dan lainnya</p>
-                    <a href="../operator/operator_login.php">Masuk</a>
+                    <a href="/operator/operator_login.php">Masuk</a>
                 </div>
             </div>
         </div>
