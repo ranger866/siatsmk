@@ -7,4 +7,7 @@ require_once "../../../backend/crud/read/read_all.php";
 
 
 <div class="home_content">
+    <div class="content">
+        
+    </div>
 </div>
