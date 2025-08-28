@@ -34,7 +34,7 @@ function base_header($title = "Sistem Akademik Sekolah") {
 function base_footer() {
 ?>
 <footer>
-  <p>Copyright&#169 2025 14A11. All Rights Reserved</p>
+  <p>Copyright&#169 2025. 14A11. All Rights Reserved</p>
 </footer>
 
 

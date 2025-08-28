@@ -1,0 +1,26 @@
+:root {
+    --main-color : rgb(0,0,180);
+    --second-color : rgb(255,255,255);
+}
+
+.content_container {
+    margin: 1em 1em 0 5em;
+    border: solid 2px var(--main-color);
+    border-radius: 10px;
+    width: auto;
+    height: 40em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

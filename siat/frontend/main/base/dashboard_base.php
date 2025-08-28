@@ -107,7 +107,7 @@ $title = "Dashboard {$role}"
     </nav>
   </header>
 
-  <?php include "dashboard_home_content.php" ?>
+  <?php include "dashboard_content.php" ?>
 
 </body>
 </html>

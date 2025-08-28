@@ -27,8 +27,9 @@ header > .logo {
 
 header > .navbar {
     display: flex;
-    gap: 1em;
+    justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 header > .navbar > .profile_img {
@@ -45,7 +46,7 @@ header > .sidebar {
     align-items: center;
     gap: 10px;
     position: absolute;
-    top: 6em;
+    top: 12%;
     pointer-events: none;
 }
 
@@ -87,21 +88,40 @@ header > .burger {
 }
 
 
-  /* --- RESPONSIVE --- */
 @media (min-width: 768px) {
-    header {
-        padding: 1em 2em;
+    header > .logo, .navbar {
+        padding: 1em;
     }
-
+    
     header > .logo {
         width: 25%;
     }
+
+    header > .sidebar {
+        top: 15%;
+    }
+}
+
+
+  /* --- RESPONSIVE --- */
+@media (min-width: 1020px) {
+    header {
+        padding:0 1em;
+    }
+
+    header > .logo {
+        width: 15%;
+    }
   
     header > .navbar {
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
+        align-items: center; */
+        font-size: 1.5em;
+    }
+
+    header > .sidebar {
+        top: 17%;
     }
   
     header > .burger {
