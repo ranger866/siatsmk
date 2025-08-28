@@ -53,6 +53,6 @@ if ($user && $password === $user['password']) {
     header("Location: /{$role}/dashboard.php");
 
 } else {
-    header("Location: {$role}_login.php?error=invalid");
+    header("Location: {$role}/{$role}_login.php?error=invalid");
     exit;
 }
